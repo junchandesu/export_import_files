@@ -1,0 +1,36 @@
+<h1>Products List</h1>
+<p>
+	Download:
+	<%= link_to "CSV file", products_path(format: "csv") %>
+	|
+	<%= link_to "EXCEL file", products_path(format: "xls") %>
+</p>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Released date</th>
+			<th>Manufacture</th>
+		</tr>
+	</thead>
+    <tbody>
+    	<% @products.each do |product| %>
+    	<tr>
+    		<td><%= product.id %></td>
+    		<td><%= product.name %></td>
+    		<td><%= product.price %></td>
+    		<td><%= product.released_on %></td>
+    		<td><%= product.manufacture.name if product.manufacture %></td>
+    	</tr>
+    	<% end %>
+    </tbody>
+ </table>
+
+<%= form_tag import_products_path, multipart: true do %>
+	<%= file_field_tag :file %>
+	<%= submit_tag "Import" %>
+<% end %>
