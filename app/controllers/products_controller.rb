@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   	# file is saved temporarily in tmp
   	file = Product.import(params[:file])
     if file.nil?
-  	  redirect_to root_url, notice: "#{params[:file]} is not proper file to upload."
+       redirect_to root_url, notice: "#{params[:file].original_filename} is not proper file to upload."
   	else
   	   redirect_to root_url, notice: "New colum is added"
     end

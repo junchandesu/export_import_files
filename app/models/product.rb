@@ -69,7 +69,7 @@ def self.import(file)
      when ".xls" then Roo::Excel.new(file.path)
      when ".xlsx" then Roo::Excelx.new(file.path,packaged: nil, fill_warning: :ignore)
      when '.ods'  then Roo::OpenOffice.new(file.path, packaged: nil, fill_warning: :ignore)
-     else  nil  #raise "Unknown file type: #{file.original_filename}"
+     else  nil #raise "Unknown file type: #{file.original_filename}"
      end
   end
 end

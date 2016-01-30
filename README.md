@@ -1,4 +1,5 @@
 ## RailsでCSV/Excelのダウンロード機能の実装方法: Exporting CSV and Excel 
+## Google map
 
 ---
 
@@ -22,3 +23,8 @@ export http://ruby-rails.hatenadiary.com/entry/20141119/1416398472
 import http://ruby-rails.hatenadiary.com/entry/20141120/1416483136
 Video: 
 export http://railscasts.com/episodes/362-exporting-csv-and-excel
+
+google map
+Reference: http://qiita.com/cigalecigales/items/bfdaa07a7fa29a4175cb
+		   http://qiita.com/cigalecigales/items/9dda1f67cea215c0feab
+map design: https://snazzymaps.com/
